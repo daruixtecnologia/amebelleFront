@@ -1,0 +1,30 @@
+
+<div class="row">
+  <div class="col-12">
+    <h3 class="bd-title">Cadastrar Cliente</h3>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class='row'>
+  <div class='col-12'>
+    <ngx-datatable
+      class="material"
+      [rows]="clientesList"
+      [columns]="[
+      {prop: 'nome',name:'Nome'},
+      {prop: 'sobrenome',name:'Sobrenome'},
+      {prop: 'idade',name:'Idade'},
+      {prop: 'ddd',name:'DDD'},
+      {prop: 'telefone',name:'Telefone'},
+      {prop: 'dtNascimento',name:'Data de Nascimento'},
+      {prop: 'email',name:'E-mail'},
+      {prop: 'dataRegistro',name:'Data de Registro'}]"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [limit]="10">
+    </ngx-datatable>
+  </div>
+</div>
+

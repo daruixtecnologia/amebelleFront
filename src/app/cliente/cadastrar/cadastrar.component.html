@@ -1,0 +1,78 @@
+
+<div class="row">
+  <div class="col-12">
+    <h3 class="bd-title">Cadastrar Cliente</h3>
+  </div>
+</div>
+
+<form novalidate [formGroup]='cadastrarClienteForm'>
+  <div class="row">
+    <div class="col-6">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Nome" formControlName="nome">
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Sobrenome" formControlName="sobrenome">
+          </mat-form-field>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Idade" formControlName="idade">
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput [textMask]="{mask: maskData}" placeholder="Data de Nascimento" formControlName="dtNascimento">
+          </mat-form-field>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-6">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="E-mail" formControlName="email">
+            </mat-form-field>
+          </div>
+      </div>
+      <div class="col-6">
+        <div class="col-3 float-left pl-0">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="DDD" formControlName="ddd">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-9 float-left pr-0">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput [textMask]="{mask: maskTelefone}" placeholder="Telefone" formControlName="telefone">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-outline-success float-right" (click)='cadastrar(cadastrarClienteForm.value)'>Cadastrar</button>
+      </div>
+    </div>
+</form>
+
+
+
+
+
+
+
