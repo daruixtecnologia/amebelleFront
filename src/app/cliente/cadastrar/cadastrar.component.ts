@@ -24,7 +24,8 @@ export class CadastrarComponent implements OnInit {
       telefone: '',
       ddd: '',
       dtNascimento: '',
-      email: ''
+      email: '',
+      procedimento: ''
     });
   }
 

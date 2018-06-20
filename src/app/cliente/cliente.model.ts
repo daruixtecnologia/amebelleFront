@@ -6,6 +6,7 @@ export class Cliente {
     telefone: string,
     ddd: string,
     dtNascimento: string,
-    email: string
+    email: string,
+    procedimento: string
   ) {}
 }

@@ -1,10 +1,40 @@
 
 <div class="row">
   <div class="col-12">
-    <h3 class="bd-title">Cadastrar Cliente</h3>
+    <h3 class="bd-title">Ver Clientes</h3>
   </div>
 </div>
 <div class="clearfix"></div>
+
+<form novalidate [formGroup]='searchForm'>
+    <div class="row">
+      <div class="col-3">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Data de Nascimento" formControlName="dtNascimento">
+            </mat-form-field>
+          </div>
+      </div>
+      <div class="col-3">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Data de Registro" formControlName="dataRegistro">
+            </mat-form-field>
+          </div>
+      </div>
+      <div class="col-3">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Procedimento" formControlName="procedimento">
+            </mat-form-field>
+          </div>
+      </div>
+      <div class="col-3 pt-2">
+        <button class="col-4 btn btn-outline-primary" (click)='searchClientes(searchForm.value)'>Buscar</button>
+      </div>
+    </div>
+</form>
+
 <div class='row'>
   <div class='col-12'>
     <ngx-datatable
@@ -16,8 +46,9 @@
       {prop: 'idade',name:'Idade'},
       {prop: 'ddd',name:'DDD'},
       {prop: 'telefone',name:'Telefone'},
-      {prop: 'dtNascimento',name:'Data de Nascimento'},
       {prop: 'email',name:'E-mail'},
+      {prop: 'procedimento',name:'Procedimento'},
+      {prop: 'dtNascimento',name:'Data de Nascimento'},
       {prop: 'dataRegistro',name:'Data de Registro'}]"
       [columnMode]="'force'"
       [headerHeight]="50"

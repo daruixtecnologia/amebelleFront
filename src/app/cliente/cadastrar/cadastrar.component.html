@@ -24,16 +24,25 @@
   </div>
   <div class="row">
     <div class="col-6">
-        <div class="example-container">
-          <mat-form-field>
-            <input matInput placeholder="Idade" formControlName="idade">
-          </mat-form-field>
+        <div class="col-6 float-left pl-0">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Idade" formControlName="idade">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-6 float-left pr-0">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput [textMask]="{mask: maskData}" placeholder="Data de Nascimento" formControlName="dtNascimento">
+            </mat-form-field>
+          </div>
         </div>
     </div>
     <div class="col-6">
         <div class="example-container">
           <mat-form-field>
-            <input matInput [textMask]="{mask: maskData}" placeholder="Data de Nascimento" formControlName="dtNascimento">
+              <input matInput placeholder="Procedimento" formControlName="procedimento">
           </mat-form-field>
         </div>
     </div>
